@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Michael Kwakwa',
-  description: 'Creative Director, Founder & Visionary',
+  description: 'Creative Director and founder building meaningful music, platforms, and ideas at the intersection of culture, technology and purpose',
 };
 
 export default function RootLayout({
