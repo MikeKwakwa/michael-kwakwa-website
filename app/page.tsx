@@ -6,7 +6,6 @@ import { Mail, Instagram } from 'lucide-react';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
-  const [showPUAMessage, setShowPUAMessage] = useState(false);
   const [showTAGMessage, setShowTAGMessage] = useState(false);
   const [showHEALMessage, setShowHEALMessage] = useState(false);
   const [showOwnPlayMessage, setShowOwnPlayMessage] = useState(false);
@@ -173,28 +172,6 @@ export default function Home() {
             </p>
           </a>
 
-          {/* Pick Up Academy */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setShowPUAMessage(true);
-            }}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer"
-          >
-            <div className="flex flex-col items-center justify-center h-28">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg">
-                <span className="text-white font-black text-2xl tracking-tighter">PUA</span>
-              </div>
-            </div>
-            <h3 className="mt-6 text-base font-bold text-neutral-900">
-              Pick Up Academy
-            </h3>
-            <p className="mt-2 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Football training · Youth development
-            </p>
-          </a>
-
           {/* Future Projects Placeholder */}
           <div className="flex flex-col items-center text-center opacity-40">
             <div className="flex items-center justify-center h-28">
@@ -256,35 +233,6 @@ export default function Home() {
           Built by Michael Kwakwa — OWNPLAY™ Ecosystem.
         </p>
       </footer>
-
-      {/* Pick Up Academy Modal */}
-      {showPUAMessage && (
-        <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
-          onClick={() => setShowPUAMessage(false)}
-        >
-          <div
-            className="bg-white rounded-lg shadow-2xl p-8 max-w-sm w-full text-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg mb-6">
-              <span className="text-white font-black text-2xl tracking-tighter">PUA</span>
-            </div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              Pick Up Academy
-            </h3>
-            <p className="text-lg text-neutral-600 mb-6">
-              Re-Launching 2026
-            </p>
-            <button
-              onClick={() => setShowPUAMessage(false)}
-              className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* This Ability Group Modal */}
       {showTAGMessage && (
