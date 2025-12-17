@@ -254,7 +254,7 @@ export default function Home() {
               This Ability Group CIC
             </h3>
             <p className="text-lg text-neutral-600 mb-6">
-              Launching January 2026
+              Launching April 2026
             </p>
             <button
               onClick={() => setShowTAGMessage(false)}
