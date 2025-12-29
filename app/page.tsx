@@ -201,9 +201,9 @@ export default function Home() {
             <Mail className="w-6 h-6" />
           </a>
           <a
-            href="https://www.tiktok.com/@_somebodyshero"
+            href="https://www.tiktok.com/@whoismichaelkwakwa_"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-neutral-900 dark:text-white hover:opacity-70 transition-all duration-200 hover:scale-105"
             aria-label="TikTok"
           >
@@ -217,9 +217,9 @@ export default function Home() {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/somebodyshero/"
+            href="https://www.instagram.com/whoismichaelkwakwa/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-neutral-900 dark:text-white hover:opacity-70 transition-all duration-200 hover:scale-105"
             aria-label="Instagram"
           >
