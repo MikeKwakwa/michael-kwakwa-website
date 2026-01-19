@@ -149,23 +149,14 @@ export default function Home() {
             }}
             className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer"
           >
-            <div className="flex items-center justify-center h-28">
-              <div className="flex items-center gap-3">
-                <div className="w-14 h-14 rounded-full border-4 border-blue-600 flex items-center justify-center bg-white">
-                  <div className="flex flex-col items-center -space-y-1">
-                    <span className="text-blue-600 font-bold text-sm">TA</span>
-                    <span className="text-cyan-500 font-bold text-sm">G</span>
-                  </div>
-                </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-lg font-bold text-blue-600 leading-tight">This</span>
-                  <span className="text-lg font-bold text-blue-600 leading-tight">Ability</span>
-                  <span className="text-lg font-bold leading-tight">
-                    <span className="text-blue-600">Group </span>
-                    <span className="text-black">CIC</span>
-                  </span>
-                </div>
-              </div>
+            <div className="h-28 flex items-center justify-center">
+              <Image
+                src="/logos/chatgpt_image_sep_3,_2025,_06_59_19_pm.png"
+                alt="This Ability Group CIC logo"
+                width={112}
+                height={112}
+                className="max-h-full w-auto object-contain"
+              />
             </div>
             <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
               Inclusive opportunities
@@ -244,11 +235,14 @@ export default function Home() {
             className="bg-white rounded-lg shadow-2xl p-8 max-w-sm w-full text-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="w-20 h-20 mx-auto rounded-full border-4 border-blue-600 flex items-center justify-center bg-white shadow-lg mb-6">
-              <div className="flex flex-col items-center -space-y-1">
-                <span className="text-blue-600 font-bold text-lg">TA</span>
-                <span className="text-cyan-500 font-bold text-lg">G</span>
-              </div>
+            <div className="w-32 h-32 mx-auto flex items-center justify-center mb-6">
+              <Image
+                src="/logos/chatgpt_image_sep_3,_2025,_06_59_19_pm.png"
+                alt="This Ability Group CIC logo"
+                width={128}
+                height={128}
+                className="w-full h-full object-contain"
+              />
             </div>
             <h3 className="text-2xl font-bold text-neutral-900 mb-2">
               This Ability Group CIC
