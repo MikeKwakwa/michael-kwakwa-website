@@ -43,9 +43,15 @@ export default function Home() {
             rel="noreferrer"
             className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 lg:col-span-3"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
-              FairPlayer
-            </h2>
+            <div className="h-40 flex items-center justify-center">
+              <Image
+                src="/logos/fairplayer_logo_2.png"
+                alt="FairPlayer logo"
+                width={800}
+                height={224}
+                className="max-h-full w-auto object-contain"
+              />
+            </div>
 
             <p className="mt-5 text-sm text-neutral-600 leading-relaxed max-w-md mx-auto">
               The future of music streaming
