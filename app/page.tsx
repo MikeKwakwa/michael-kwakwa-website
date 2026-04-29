@@ -121,7 +121,7 @@ export default function Home() {
           >
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/logos/Mikey-Shy-Logo-blk-tbf.png"
+                src="/logos/mikey-shy-logo.png"
                 alt="Mikey Shy logo"
                 width={220}
                 height={112}
@@ -162,7 +162,7 @@ export default function Home() {
           >
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/logos/H.E.A.L_Alt_cover_1.2_(eBook).jpg"
+                src="/logos/heal-part-one-cover.jpg"
                 alt="H.E.A.L Part One book cover"
                 width={110}
                 height={112}
