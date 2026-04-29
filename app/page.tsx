@@ -19,10 +19,64 @@ export default function Home() {
     }
   }, [showOwnPlayMessage]);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michael Kwakwa",
+    "jobTitle": "Creative Director",
+    "url": "https://michaelkwakwa.com",
+    "email": "Letswork@michaelkwakwa.com",
+    "sameAs": [
+      "https://www.instagram.com/whoismichaelkwakwa/",
+      "https://www.tiktok.com/@whoismichaelkwakwa_",
+      "https://www.youtube.com/@mikeyshy"
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "FairPlayer",
+        "url": "https://www.fairplayer.io",
+        "description": "The future of music streaming"
+      },
+      {
+        "@type": "Organization",
+        "name": "OwnPlay",
+        "description": "Creative Ecosystem"
+      }
+    ],
+    "foundingMember": [
+      {
+        "@type": "Organization",
+        "name": "This Ability Group CIC",
+        "description": "Inclusive opportunities",
+        "foundingDate": "2026-06"
+      }
+    ],
+    "creator": [
+      {
+        "@type": "CreativeWork",
+        "name": "H.E.A.L Part One",
+        "description": "A mental help guide",
+        "url": "https://rebrand.ly/Heal-by-MichaelKwakwa",
+        "genre": "Self-Help"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Mikey Shy",
+        "description": "Music, Visuals, Storytelling",
+        "url": "https://www.youtube.com/@mikeyshy"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
-        <header className="text-center">
+        <header className="text-center opacity-0 animate-fade-in">
           <h1 className="text-xs tracking-[0.25em] uppercase text-neutral-500">
             MICHAEL KWAKWA
           </h1>
@@ -41,7 +95,7 @@ export default function Home() {
             href="https://www.fairplayer.io"
             target="_blank"
             rel="noreferrer"
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 lg:col-span-3"
+            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 lg:col-span-3 opacity-0 animate-fade-in-up animation-delay-200"
           >
             <div className="h-40 flex items-center justify-center">
               <Image
@@ -63,11 +117,11 @@ export default function Home() {
             href="https://www.youtube.com/@mikeyshy"
             target="_blank"
             rel="noreferrer"
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900"
+            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 opacity-0 animate-fade-in-up animation-delay-300"
           >
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/logos/mikey-shy-logo-blk-tbf.png"
+                src="/logos/Mikey-Shy-Logo-blk-tbf.png"
                 alt="Mikey Shy logo"
                 width={220}
                 height={112}
@@ -82,7 +136,7 @@ export default function Home() {
           {/* OwnPlay */}
           <button
             onClick={() => setShowOwnPlayMessage(true)}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer"
+            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
           >
             <div className="flex items-center justify-center h-28">
               <div className="flex items-center gap-2">
@@ -104,11 +158,11 @@ export default function Home() {
             href="https://rebrand.ly/Heal-by-MichaelKwakwa"
             target="_blank"
             rel="noreferrer"
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900"
+            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 opacity-0 animate-fade-in-up animation-delay-500"
           >
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/logos/h.e.a.l_alt_cover_1.2_(ebook).jpg"
+                src="/logos/H.E.A.L_Alt_cover_1.2_(eBook).jpg"
                 alt="H.E.A.L Part One book cover"
                 width={110}
                 height={112}
@@ -127,7 +181,7 @@ export default function Home() {
               e.preventDefault();
               setShowHEALMessage(true);
             }}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 relative cursor-pointer"
+            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 relative cursor-pointer opacity-0 animate-fade-in-up animation-delay-300"
           >
             <div className="absolute -top-3 right-1/2 translate-x-1/2">
               <span className="inline-block px-2 py-0.5 text-[9px] tracking-[0.15em] uppercase bg-emerald-100 text-emerald-700 border border-emerald-300 rounded">
@@ -153,11 +207,11 @@ export default function Home() {
               e.preventDefault();
               setShowTAGMessage(true);
             }}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer"
+            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
           >
             <div className="h-28 flex items-center justify-center">
               <Image
-                src="/logos/chatgpt_image_sep_3,_2025,_06_59_19_pm.png"
+                src="/logos/ChatGPT_Image_Sep_3,_2025,_06_59_19_PM copy.png"
                 alt="This Ability Group CIC logo"
                 width={112}
                 height={112}
@@ -170,7 +224,7 @@ export default function Home() {
           </a>
 
           {/* Future Projects Placeholder */}
-          <div className="flex flex-col items-center text-center opacity-40">
+          <div className="flex flex-col items-center text-center opacity-0 animate-fade-in-up animation-delay-600">
             <div className="flex items-center justify-center h-28">
               <div className="w-20 h-20 rounded-full border-2 border-dashed border-neutral-300 flex items-center justify-center">
                 <span className="text-4xl text-neutral-300">+</span>
@@ -188,7 +242,7 @@ export default function Home() {
       </div>
 
       {/* New Footer Section */}
-      <footer className="py-12 text-center bg-white">
+      <footer className="py-12 text-center bg-white opacity-0 animate-fade-in animation-delay-600">
         <div className="flex items-center justify-center gap-6 mb-4">
           <a
             href="mailto:Letswork@michaelkwakwa.com"
@@ -243,7 +297,7 @@ export default function Home() {
           >
             <div className="w-32 h-32 mx-auto flex items-center justify-center mb-6">
               <Image
-                src="/logos/chatgpt_image_sep_3,_2025,_06_59_19_pm.png"
+                src="/logos/ChatGPT_Image_Sep_3,_2025,_06_59_19_PM copy.png"
                 alt="This Ability Group CIC logo"
                 width={128}
                 height={128}
@@ -254,7 +308,7 @@ export default function Home() {
               This Ability Group CIC
             </h3>
             <p className="text-lg text-neutral-600 mb-6">
-              Launching April 2026
+              Launching June 2026
             </p>
             <button
               onClick={() => setShowTAGMessage(false)}
