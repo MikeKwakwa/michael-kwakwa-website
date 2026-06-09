@@ -1,23 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Mail, Instagram } from 'lucide-react';
 
 export default function Home() {
-  const currentYear = new Date().getFullYear();
-  const [showTAGMessage, setShowTAGMessage] = useState(false);
-  const [showHEALMessage, setShowHEALMessage] = useState(false);
-  const [showOwnPlayMessage, setShowOwnPlayMessage] = useState(false);
-
-  useEffect(() => {
-    if (showOwnPlayMessage) {
-      const timer = setTimeout(() => {
-        setShowOwnPlayMessage(false);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [showOwnPlayMessage]);
+  const [showComingSoon, setShowComingSoon] = useState(false);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -90,27 +78,24 @@ export default function Home() {
 
         <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 lg:gap-x-12">
 
-          {/* FairPlayer - Flagship Platform */}
-          <a
-            href="https://www.fairplayer.io"
-            target="_blank"
-            rel="noreferrer"
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 lg:col-span-3 opacity-0 animate-fade-in-up animation-delay-200"
+          {/* FairPlayer Tools - Flagship Platform */}
+          <button
+            onClick={() => setShowComingSoon(true)}
+            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer lg:col-span-3 opacity-0 animate-fade-in-up animation-delay-200"
           >
-            <div className="h-40 flex items-center justify-center">
+            <div className="h-52 flex items-center justify-center">
               <Image
-                src="/logos/fairplayer_logo_2.png"
-                alt="FairPlayer logo"
-                width={800}
-                height={224}
+                src="/logos/ChatGPT_Image_Jun_8,_2026,_03_09_36_PM.png"
+                alt="FairPlayer Tools logo"
+                width={900}
+                height={260}
                 className="max-h-full w-auto object-contain"
               />
             </div>
-
             <p className="mt-5 text-sm text-neutral-600 leading-relaxed max-w-md mx-auto">
-              The future of music streaming
+              Coming Soon
             </p>
-          </a>
+          </button>
 
           {/* Mikey Shy */}
           <a
@@ -119,12 +104,12 @@ export default function Home() {
             rel="noreferrer"
             className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 opacity-0 animate-fade-in-up animation-delay-300"
           >
-            <div className="h-28 flex items-center justify-center">
+            <div className="h-36 flex items-center justify-center">
               <Image
-                src="/logos/mikey-shy-logo.png"
+                src="/logos/Mikey-Shy-Logo-blk-tbf.png"
                 alt="Mikey Shy logo"
-                width={220}
-                height={112}
+                width={280}
+                height={144}
                 className="max-h-full w-auto object-contain"
               />
             </div>
@@ -133,23 +118,22 @@ export default function Home() {
             </p>
           </a>
 
-          {/* OwnPlay */}
+          {/* OwnPlayer */}
           <button
-            onClick={() => setShowOwnPlayMessage(true)}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
+            onClick={() => setShowComingSoon(true)}
+            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
           >
-            <div className="flex items-center justify-center h-28">
-              <div className="flex items-center gap-2">
-                <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center">
-                  <div className="w-0 h-0 border-l-[10px] border-l-black border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent ml-1" />
-                </div>
-                <span className="text-3xl font-bold tracking-tight text-neutral-900">
-                  OwnPlay™
-                </span>
-              </div>
+            <div className="h-36 flex items-center justify-center">
+              <Image
+                src="/logos/OWNPLAYER.IO_LOGO.png"
+                alt="OwnPlayer logo"
+                width={360}
+                height={144}
+                className="max-h-full w-auto object-contain"
+              />
             </div>
             <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Creative Ecosystem
+              Coming Soon
             </p>
           </button>
 
@@ -160,12 +144,12 @@ export default function Home() {
             rel="noreferrer"
             className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 opacity-0 animate-fade-in-up animation-delay-500"
           >
-            <div className="h-28 flex items-center justify-center">
+            <div className="h-36 flex items-center justify-center">
               <Image
-                src="/logos/heal-part-one-cover.jpg"
+                src="/logos/H.E.A.L_Alt_cover_1.2_(eBook).jpg"
                 alt="H.E.A.L Part One book cover"
-                width={110}
-                height={112}
+                width={140}
+                height={144}
                 className="max-h-full w-auto object-contain shadow-md"
               />
             </div>
@@ -175,68 +159,64 @@ export default function Home() {
           </a>
 
           {/* H.E.A.L Part Two */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setShowHEALMessage(true);
-            }}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 relative cursor-pointer opacity-0 animate-fade-in-up animation-delay-300"
+          <button
+            onClick={() => setShowComingSoon(true)}
+            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer relative opacity-0 animate-fade-in-up animation-delay-300"
           >
-            <div className="absolute -top-3 right-1/2 translate-x-1/2">
-              <span className="inline-block px-2 py-0.5 text-[9px] tracking-[0.15em] uppercase bg-emerald-100 text-emerald-700 border border-emerald-300 rounded">
-                In Development
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center justify-center h-28">
-              <span className="text-2xl font-semibold tracking-[0.2em] text-sky-500">
-                H.E.A.L
-              </span>
-              <span className="text-xs mt-1 text-neutral-500">Part Two</span>
+            <div className="h-36 flex items-center justify-center">
+              <Image
+                src="/logos/H_E_A_L_Part_2_cover_1-1.png"
+                alt="H.E.A.L Part 2 cover"
+                width={112}
+                height={144}
+                className="max-h-full w-auto object-contain shadow-md"
+              />
             </div>
             <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Hope · Empowerment · Attitude · Legacy
+              H.E.A.L Part 2
             </p>
-          </a>
+            <p className="mt-1 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
+              Coming Soon
+            </p>
+          </button>
 
           {/* This Ability Group CIC */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setShowTAGMessage(true);
-            }}
+          <button
+            onClick={() => setShowComingSoon(true)}
             className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
           >
-            <div className="h-28 flex items-center justify-center">
+            <div className="h-36 flex items-center justify-center">
               <Image
                 src="/logos/ChatGPT_Image_Sep_3,_2025,_06_59_19_PM copy.png"
                 alt="This Ability Group CIC logo"
-                width={112}
-                height={112}
+                width={144}
+                height={144}
                 className="max-h-full w-auto object-contain"
               />
             </div>
             <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
               Inclusive opportunities
             </p>
-          </a>
+          </button>
 
-          {/* Future Projects Placeholder */}
-          <div className="flex flex-col items-center text-center opacity-0 animate-fade-in-up animation-delay-600">
-            <div className="flex items-center justify-center h-28">
-              <div className="w-20 h-20 rounded-full border-2 border-dashed border-neutral-300 flex items-center justify-center">
-                <span className="text-4xl text-neutral-300">+</span>
-              </div>
+          {/* OwnPlay Technologies */}
+          <button
+            onClick={() => setShowComingSoon(true)}
+            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-600"
+          >
+            <div className="h-36 flex items-center justify-center">
+              <Image
+                src="/logos/OWNPLAY_TECHNOLOGIES.png"
+                alt="OwnPlay Technologies logo"
+                width={360}
+                height={144}
+                className="max-h-full w-auto object-contain"
+              />
             </div>
-            <p className="mt-6 text-xs text-neutral-400 tracking-[0.15em] uppercase">
-              More Projects
-            </p>
-            <p className="mt-1 text-[10px] text-neutral-400">
+            <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
               Coming Soon
             </p>
-          </div>
+          </button>
 
         </main>
       </div>
@@ -285,89 +265,23 @@ export default function Home() {
         </p>
       </footer>
 
-      {/* This Ability Group Modal */}
-      {showTAGMessage && (
+      {/* Coming Soon Modal */}
+      {showComingSoon && (
         <div
           className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
-          onClick={() => setShowTAGMessage(false)}
+          onClick={() => setShowComingSoon(false)}
         >
           <div
             className="bg-white rounded-lg shadow-2xl p-8 max-w-sm w-full text-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="w-32 h-32 mx-auto flex items-center justify-center mb-6">
-              <Image
-                src="/logos/ChatGPT_Image_Sep_3,_2025,_06_59_19_PM copy.png"
-                alt="This Ability Group CIC logo"
-                width={128}
-                height={128}
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              This Ability Group CIC
-            </h3>
-            <p className="text-lg text-neutral-600 mb-6">
-              Launching June 2026
+            <p className="text-2xl font-bold text-neutral-900">
+              Coming Soon
             </p>
-            <button
-              onClick={() => setShowTAGMessage(false)}
-              className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Close
-            </button>
           </div>
         </div>
       )}
 
-      {/* H.E.A.L Part Two Modal */}
-      {showHEALMessage && (
-        <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
-          onClick={() => setShowHEALMessage(false)}
-        >
-          <div
-            className="bg-white rounded-lg shadow-2xl p-8 max-w-sm w-full text-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex flex-col items-center justify-center mb-6">
-              <span className="text-4xl font-semibold tracking-[0.2em] text-sky-500">
-                H.E.A.L
-              </span>
-              <span className="text-base mt-1 text-neutral-500">Part Two</span>
-            </div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              Hope · Empowerment · Attitude · Legacy
-            </h3>
-            <p className="text-lg text-neutral-600 mb-6">
-              In Development
-            </p>
-            <button
-              onClick={() => setShowHEALMessage(false)}
-              className="px-6 py-2 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-colors"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* OwnPlay Modal */}
-      {showOwnPlayMessage && (
-        <div
-          className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4"
-          onClick={() => setShowOwnPlayMessage(false)}
-        >
-          <div
-            className="bg-white rounded-xl shadow-lg p-10 max-w-md w-full text-center animate-in fade-in duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <p className="text-2xl font-medium text-neutral-900">
-              OWNPLAY™ — Launching 2026
-            </p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
