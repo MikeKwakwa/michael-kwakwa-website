@@ -78,15 +78,15 @@ export default function Home() {
 
         <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 lg:gap-x-12">
 
-          {/* FairPlayer Tools - Flagship Platform */}
+          {/* OwnPlayer - Flagship Platform */}
           <button
             onClick={() => setShowComingSoon(true)}
             className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer lg:col-span-3 opacity-0 animate-fade-in-up animation-delay-200"
           >
             <div className="h-52 flex items-center justify-center">
               <Image
-                src="/logos/ChatGPT_Image_Jun_8,_2026,_03_09_36_PM.png"
-                alt="FairPlayer Tools logo"
+                src="/logos/OWNPLAYER.IO_LOGO.png"
+                alt="OwnPlayer logo"
                 width={900}
                 height={260}
                 className="max-h-full w-auto object-contain"
@@ -106,7 +106,7 @@ export default function Home() {
           >
             <div className="h-36 flex items-center justify-center">
               <Image
-                src="/logos/Mikey-Shy-Logo-blk-tbf.png"
+                src="/logos/Mikey-Shy-Logo-blk-tbf copy.png"
                 alt="Mikey Shy logo"
                 width={280}
                 height={144}
@@ -118,15 +118,15 @@ export default function Home() {
             </p>
           </a>
 
-          {/* OwnPlayer */}
+          {/* FairPlayer Tools */}
           <button
             onClick={() => setShowComingSoon(true)}
             className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
           >
             <div className="h-36 flex items-center justify-center">
               <Image
-                src="/logos/OWNPLAYER.IO_LOGO.png"
-                alt="OwnPlayer logo"
+                src="/logos/ChatGPT_Image_Jun_8,_2026,_03_09_36_PM.png"
+                alt="FairPlayer Tools logo"
                 width={360}
                 height={144}
                 className="max-h-full w-auto object-contain"
@@ -146,7 +146,7 @@ export default function Home() {
           >
             <div className="h-36 flex items-center justify-center">
               <Image
-                src="/logos/H.E.A.L_Alt_cover_1.2_(eBook).jpg"
+                src="/logos/H.E.A.L_Alt_cover_1.2_(eBook) copy.jpg"
                 alt="H.E.A.L Part One book cover"
                 width={140}
                 height={144}
@@ -165,7 +165,7 @@ export default function Home() {
           >
             <div className="h-36 flex items-center justify-center">
               <Image
-                src="/logos/H_E_A_L_Part_2_cover_1-1.png"
+                src="/logos/H_E_A_L_Part_2_cover_1-1 copy.png"
                 alt="H.E.A.L Part 2 cover"
                 width={112}
                 height={144}
