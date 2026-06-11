@@ -119,8 +119,10 @@ export default function Home() {
           </a>
 
           {/* FairPlayer Tools */}
-          <button
-            onClick={() => setShowComingSoon(true)}
+          <a
+            href="https://www.fairplayer.io"
+            target="_blank"
+            rel="noreferrer"
             className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
           >
             <div className="h-36 flex items-center justify-center">
@@ -133,9 +135,9 @@ export default function Home() {
               />
             </div>
             <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Coming Soon
+              View Project
             </p>
-          </button>
+          </a>
 
           {/* H.E.A.L Part One */}
           <a
