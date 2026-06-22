@@ -118,27 +118,6 @@ export default function Home() {
             </p>
           </a>
 
-          {/* FairPlayer Tools */}
-          <a
-            href="https://www.fairplayer.io"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
-          >
-            <div className="h-36 flex items-center justify-center">
-              <Image
-                src="/logos/ChatGPT_Image_Jun_8,_2026,_03_09_36_PM.png"
-                alt="FairPlayer Tools logo"
-                width={360}
-                height={144}
-                className="max-h-full w-auto object-contain"
-              />
-            </div>
-            <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              View Project
-            </p>
-          </a>
-
           {/* H.E.A.L Part One */}
           <a
             href="https://rebrand.ly/Heal-by-MichaelKwakwa"
