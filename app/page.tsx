@@ -106,7 +106,7 @@ export default function Home() {
           >
             <div className="h-52 flex items-center justify-center">
               <Image
-                src="/logos/FairPlayer_logo_2.png"
+                src="/logos/FairPlayer_logo_2 copy.png"
                 alt="FairPlayer Smartlinks logo"
                 width={560}
                 height={208}
