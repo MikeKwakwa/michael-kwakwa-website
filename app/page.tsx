@@ -97,6 +97,27 @@ export default function Home() {
             </p>
           </button>
 
+          {/* FairPlayer Smartlinks */}
+          <a
+            href="https://fairplayer.io/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-300"
+          >
+            <div className="h-52 flex items-center justify-center">
+              <Image
+                src="/logos/FairPlayer_logo_2.png"
+                alt="FairPlayer Smartlinks logo"
+                width={560}
+                height={208}
+                className="max-h-full w-full object-contain"
+              />
+            </div>
+            <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
+              Visit FairPlayer.io
+            </p>
+          </a>
+
           {/* Mikey Shy */}
           <a
             href="https://www.youtube.com/@mikeyshy"
