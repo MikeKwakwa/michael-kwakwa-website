@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { Mail, Instagram } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 
 export default function Home() {
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -15,7 +15,7 @@ export default function Home() {
     "url": "https://michaelkwakwa.com",
     "email": "Letswork@michaelkwakwa.com",
     "sameAs": [
-      "https://www.instagram.com/whoismichaelkwakwa/",
+      "https://www.linkedin.com/in/michael-akwasi-kwakwa-",
       "https://www.tiktok.com/@whoismichaelkwakwa_",
       "https://www.youtube.com/@mikeyshy"
     ],
@@ -250,13 +250,13 @@ export default function Home() {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/whoismichaelkwakwa/"
+            href="https://www.linkedin.com/in/michael-akwasi-kwakwa-"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-900 dark:text-white hover:opacity-70 transition-all duration-200 hover:scale-105"
-            aria-label="Instagram"
+            aria-label="LinkedIn"
           >
-            <Instagram className="w-6 h-6" />
+            <Linkedin className="w-6 h-6" />
           </a>
         </div>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
