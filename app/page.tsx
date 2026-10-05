@@ -120,17 +120,17 @@ export default function Home() {
 
           {/* Mikey Shy */}
           <a
-            href="https://www.youtube.com/@mikeyshy"
+            href="https://www.youtube.com/@whoismichaelkwakwa"
             target="_blank"
             rel="noreferrer"
             className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 opacity-0 animate-fade-in-up animation-delay-300"
           >
-            <div className="h-36 flex items-center justify-center">
+            <div className="h-40 flex items-center justify-center">
               <Image
-                src="/logos/Mikey-Shy-Logo-blk-tbf copy.png"
-                alt="Mikey Shy logo"
-                width={280}
-                height={144}
+                src="/Mikey_Wrote_It_Signature_Logo.png"
+                alt="Mikey Wrote It logo"
+                width={300}
+                height={154}
                 className="max-h-full w-auto object-contain"
               />
             </div>
