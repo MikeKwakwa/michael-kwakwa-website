@@ -22,22 +22,8 @@ export default function Home() {
     "worksFor": [
       {
         "@type": "Organization",
-        "name": "FairPlayer",
-        "url": "https://www.fairplayer.io",
-        "description": "The future of music streaming"
-      },
-      {
-        "@type": "Organization",
         "name": "OwnPlay",
         "description": "Creative Ecosystem"
-      }
-    ],
-    "foundingMember": [
-      {
-        "@type": "Organization",
-        "name": "This Ability Group CIC",
-        "description": "Inclusive opportunities",
-        "foundingDate": "2026-06"
       }
     ],
     "creator": [
@@ -92,31 +78,10 @@ export default function Home() {
                 className="max-h-full w-auto object-contain"
               />
             </div>
-            <p className="mt-5 text-sm text-neutral-600 leading-relaxed max-w-md mx-auto">
+            <p className="mt-6 text-sm text-neutral-600 leading-relaxed max-w-md mx-auto">
               Coming Soon
             </p>
           </button>
-
-          {/* FairPlayer Smartlinks */}
-          <a
-            href="https://fairplayer.io/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-300"
-          >
-            <div className="h-36 flex items-center justify-center">
-              <Image
-                src="/logos/FairPlayer_logo_2 copy.png"
-                alt="FairPlayer Smartlinks logo"
-                width={560}
-                height={144}
-                className="max-h-full w-auto object-contain"
-              />
-            </div>
-            <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Visit FairPlayer.io
-            </p>
-          </a>
 
           {/* Mikey Shy */}
           <a
@@ -135,7 +100,7 @@ export default function Home() {
               />
             </div>
             <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Music · Visuals · Storytelling
+              Songwriting · Production · Creative Direction
             </p>
           </a>
 
@@ -182,29 +147,10 @@ export default function Home() {
             </p>
           </button>
 
-          {/* This Ability Group CIC */}
-          <button
-            onClick={() => setShowComingSoon(true)}
-            className="group flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 cursor-pointer opacity-0 animate-fade-in-up animation-delay-400"
-          >
-            <div className="h-36 flex items-center justify-center">
-              <Image
-                src="/logos/ChatGPT_Image_Sep_3,_2025,_06_59_19_PM copy.png"
-                alt="This Ability Group CIC logo"
-                width={144}
-                height={144}
-                className="max-h-full w-auto object-contain"
-              />
-            </div>
-            <p className="mt-6 text-xs text-neutral-600 leading-relaxed max-w-xs mx-auto">
-              Inclusive opportunities
-            </p>
-          </button>
-
           {/* OwnPlay Technologies */}
           <button
             onClick={() => setShowComingSoon(true)}
-            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer opacity-0 animate-fade-in-up animation-delay-600"
+            className="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer md:col-span-2 lg:col-span-3 opacity-0 animate-fade-in-up animation-delay-600"
           >
             <div className="h-36 flex items-center justify-center">
               <Image
